@@ -1193,7 +1193,7 @@ function sel(btn, scr, idx){
   const opts = btn.parentElement.querySelectorAll('.option');
   opts.forEach(o=>o.classList.remove('selected'));
   btn.classList.add('selected');
-  STATE.segmentation[scr] = idx;
+  STATE.segmentation[scr] = btn.textContent.trim(); // guardar texto completo
   showValidator(scr, idx);
 }
 
